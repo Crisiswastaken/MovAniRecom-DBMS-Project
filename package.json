@@ -1,0 +1,13 @@
+{
+  "name": "movie-anime-logger",
+  "version": "1.0.0",
+  "description": "Movie/Anime Recommendation Logger - Full Stack Application",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "cd backend && node server.js",
+    "dev": "cd backend && nodemon server.js"
+  },
+  "keywords": ["movie", "anime", "logger", "recommendations", "mysql"],
+  "author": "",
+  "license": "ISC"
+}

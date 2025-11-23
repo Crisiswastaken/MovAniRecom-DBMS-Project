@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Movie/Anime Logger</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-logo">Movie/Anime Logger</h1>
+            <div class="nav-links">
+                <a href="dashboard.html" class="active">Browse</a>
+                <a href="watchlist.html">My Watchlist</a>
+                <span id="userName" class="user-name"></span>
+                <button id="logoutBtn" class="btn btn-secondary">Logout</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Search and Filter Section -->
+        <div class="filter-section">
+            <input type="text" id="searchInput" placeholder="Search shows..." class="search-input">
+            
+            <select id="genreFilter" class="genre-filter">
+                <option value="">All Genres</option>
+            </select>
+            
+            <button id="getRecommendationsBtn" class="btn btn-primary">Get AI Recommendations</button>
+        </div>
+
+        <!-- Recommendations Modal (hidden by default) -->
+        <div id="recommendationsModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>AI Recommendations for You</h2>
+                <div id="recommendationsList"></div>
+            </div>
+        </div>
+
+        <!-- Shows Grid -->
+        <div id="showsGrid" class="shows-grid">
+            <!-- Shows will be loaded here dynamically -->
+        </div>
+        
+        <div id="loadingMessage" class="loading">Loading shows...</div>
+        <div id="noShowsMessage" class="no-shows" style="display: none;">No shows found</div>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Details - Movie/Anime Logger</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-logo">Movie/Anime Logger</h1>
+            <div class="nav-links">
+                <a href="dashboard.html">Browse</a>
+                <a href="watchlist.html">My Watchlist</a>
+                <span id="userName" class="user-name"></span>
+                <button id="logoutBtn" class="btn btn-secondary">Logout</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Show Details Content -->
+    <div class="container">
+        <div class="show-details">
+            <div class="show-header">
+                <img id="showImage" src="" alt="" class="show-detail-image">
+                <div class="show-info">
+                    <h1 id="showTitle"></h1>
+                    <p class="show-meta">
+                        <span id="showGenre"></span> • <span id="showYear"></span>
+                    </p>
+                    <p id="showDescription" class="show-description"></p>
+                    
+                    <button id="favouriteBtn" class="btn btn-secondary">
+                        <span id="favIcon">☆</span> Add to Favourites
+                    </button>
+                </div>
+            </div>
+
+            <!-- Add to Watch History Form -->
+            <div class="watch-form">
+                <h2>Add to Watch History</h2>
+                <form id="watchForm">
+                    <div class="form-group">
+                        <label for="rating">Rating (1-5 stars)</label>
+                        <select id="rating" name="rating" required>
+                            <option value="">Select rating</option>
+                            <option value="1">⭐ 1 - Poor</option>
+                            <option value="2">⭐⭐ 2 - Fair</option>
+                            <option value="3">⭐⭐⭐ 3 - Good</option>
+                            <option value="4">⭐⭐⭐⭐ 4 - Very Good</option>
+                            <option value="5">⭐⭐⭐⭐⭐ 5 - Excellent</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="review">Review (Optional)</label>
+                        <textarea id="review" name="review" rows="4" placeholder="Write your thoughts..."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="watchedOn">Watched On</label>
+                        <input type="date" id="watchedOn" name="watchedOn" required>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Add to Watch History</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/showDetails.js"></script>
+</body>
+</html>

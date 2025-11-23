@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Watchlist - Movie/Anime Logger</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-logo">Movie/Anime Logger</h1>
+            <div class="nav-links">
+                <a href="dashboard.html">Browse</a>
+                <a href="watchlist.html" class="active">My Watchlist</a>
+                <span id="userName" class="user-name"></span>
+                <button id="logoutBtn" class="btn btn-secondary">Logout</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h1>My Watch History</h1>
+
+        <!-- Watch History List -->
+        <div id="watchHistoryList" class="watchlist-grid">
+            <!-- Watch history items will be loaded here -->
+        </div>
+        
+        <div id="loadingMessage" class="loading">Loading your watch history...</div>
+        <div id="noHistoryMessage" class="no-shows" style="display: none;">
+            No watch history yet. Start watching some shows!
+        </div>
+    </div>
+
+    <!-- Edit Modal -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Edit Watch History</h2>
+            <form id="editForm">
+                <input type="hidden" id="editHistoryId">
+                
+                <div class="form-group">
+                    <label for="editRating">Rating (1-5 stars)</label>
+                    <select id="editRating" name="rating" required>
+                        <option value="1">⭐ 1 - Poor</option>
+                        <option value="2">⭐⭐ 2 - Fair</option>
+                        <option value="3">⭐⭐⭐ 3 - Good</option>
+                        <option value="4">⭐⭐⭐⭐ 4 - Very Good</option>
+                        <option value="5">⭐⭐⭐⭐⭐ 5 - Excellent</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="editReview">Review</label>
+                    <textarea id="editReview" name="review" rows="4"></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Save Changes</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/watchlist.js"></script>
+</body>
+</html>
