@@ -61,6 +61,22 @@ async function loadShows(genreId = '', searchTerm = '') {
     }
 }
 
+// Gradient backgrounds for show cards (replacing images)
+const gradients = [
+    'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+    'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
+    'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
+    'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)',
+    'linear-gradient(135deg, #fa709a 0%, #fee140 100%)',
+    'linear-gradient(135deg, #30cfd0 0%, #330867 100%)',
+    'linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)',
+    'linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)',
+    'linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%)',
+    'linear-gradient(135deg, #ff6e7f 0%, #bfe9ff 100%)',
+    'linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%)',
+    'linear-gradient(135deg, #f77062 0%, #fe5196 100%)'
+];
+
 // Display shows in grid
 function displayShows(shows) {
     const showsGrid = document.getElementById('showsGrid');
@@ -77,18 +93,18 @@ function displayShows(shows) {
     
     noShowsMessage.style.display = 'none';
     
-    showsGrid.innerHTML = shows.map(show => `
+    showsGrid.innerHTML = shows.map((show, index) => {
+        const gradient = gradients[index % gradients.length];
+        return `
         <div class="show-card" onclick="viewShow(${show.show_id})">
-            <img src="${show.image_url || 'https://via.placeholder.com/250x350?text=No+Image'}" 
-                 alt="${show.title}" 
-                 class="show-card-image">
+            <div class="show-card-image" style="background: ${gradient}"></div>
             <div class="show-card-content">
                 <h3 class="show-card-title">${show.title}</h3>
                 <p class="show-card-genre">${show.genre_name || 'Unknown'} • ${show.release_year || 'N/A'}</p>
                 <p class="show-card-description">${show.description || 'No description available'}</p>
             </div>
         </div>
-    `).join('');
+    `}).join('');
 }
 
 // View show details

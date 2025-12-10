@@ -1,0 +1,793 @@
+{
+  "diagramType": 1,
+  "data": {
+    "nodes": [
+      {
+        "id": "users-entity",
+        "type": "Entity",
+        "position": {
+          "x": 200,
+          "y": 150
+        },
+        "data": {
+          "label": "Users",
+          "type": "Regular",
+          "isConnectable": false,
+          "isSelected": false
+        },
+        "measured": {
+          "width": 100,
+          "height": 50
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "genres-entity",
+        "type": "Entity",
+        "position": {
+          "x": 900,
+          "y": 150
+        },
+        "data": {
+          "label": "Genres",
+          "type": "Regular",
+          "isConnectable": false,
+          "isSelected": false
+        },
+        "measured": {
+          "width": 100,
+          "height": 50
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "shows-entity",
+        "type": "Entity",
+        "position": {
+          "x": 600,
+          "y": 150
+        },
+        "data": {
+          "label": "Shows",
+          "type": "Regular",
+          "isConnectable": false,
+          "isSelected": false
+        },
+        "measured": {
+          "width": 100,
+          "height": 50
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "watch-history-entity",
+        "type": "Entity",
+        "position": {
+          "x": 400,
+          "y": 450
+        },
+        "data": {
+          "label": "Watch_History",
+          "type": "Regular",
+          "isConnectable": false,
+          "isSelected": false
+        },
+        "measured": {
+          "width": 120,
+          "height": 50
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "favourites-entity",
+        "type": "Entity",
+        "position": {
+          "x": 400,
+          "y": 650
+        },
+        "data": {
+          "label": "Favourites",
+          "type": "Regular",
+          "isConnectable": false,
+          "isSelected": false
+        },
+        "measured": {
+          "width": 100,
+          "height": 50
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "user-id-attr",
+        "parentId": "users-entity",
+        "type": "Attribute",
+        "position": {
+          "x": -120,
+          "y": -100
+        },
+        "data": {
+          "label": "user_id",
+          "types": [
+            "Key"
+          ],
+          "isSelected": false
+        },
+        "measured": {
+          "width": 80,
+          "height": 40
+        }
+      },
+      {
+        "id": "user-name-attr",
+        "parentId": "users-entity",
+        "type": "Attribute",
+        "position": {
+          "x": 0,
+          "y": -100
+        },
+        "data": {
+          "label": "name",
+          "types": [],
+          "isSelected": false
+        },
+        "measured": {
+          "width": 80,
+          "height": 40
+        }
+      },
+      {
+        "id": "user-email-attr",
+        "parentId": "users-entity",
+        "type": "Attribute",
+        "position": {
+          "x": 120,
+          "y": -100
+        },
+        "data": {
+          "label": "email",
+          "types": [],
+          "isSelected": false
+        },
+        "measured": {
+          "width": 80,
+          "height": 40
+        }
+      },
+      {
+        "id": "user-password-attr",
+        "parentId": "users-entity",
+        "type": "Attribute",
+        "position": {
+          "x": -150,
+          "y": 0
+        },
+        "data": {
+          "label": "password",
+          "types": [],
+          "isSelected": false
+        },
+        "measured": {
+          "width": 90,
+          "height": 40
+        }
+      },
+      {
+        "id": "user-created-at-attr",
+        "parentId": "users-entity",
+        "type": "Attribute",
+        "position": {
+          "x": -120,
+          "y": 80
+        },
+        "data": {
+          "label": "created_at",
+          "types": [],
+          "isSelected": false
+        },
+        "measured": {
+          "width": 90,
+          "height": 40
+        }
+      },
+      {
+        "id": "genre-id-attr",
+        "parentId": "genres-entity",
+        "type": "Attribute",
+        "position": {
+          "x": -60,
+          "y": -80
+        },
+        "data": {
+          "label": "genre_id",
+          "types": [
+            "Key"
+          ],
+          "isSelected": false
+        },
+        "measured": {
+          "width": 90,
+          "height": 40
+        }
+      },
+      {
+        "id": "genre-name-attr",
+        "parentId": "genres-entity",
+        "type": "Attribute",
+        "position": {
+          "x": 60,
+          "y": -80
+        },
+        "data": {
+          "label": "name",
+          "types": [],
+          "isSelected": false
+        },
+        "measured": {
+          "width": 80,
+          "height": 40
+        }
+      },
+      {
+        "id": "show-id-attr",
+        "parentId": "shows-entity",
+        "type": "Attribute",
+        "position": {
+          "x": -120,
+          "y": -100
+        },
+        "data": {
+          "label": "show_id",
+          "types": [
+            "Key"
+          ],
+          "isSelected": false
+        },
+        "measured": {
+          "width": 80,
+          "height": 40
+        }
+      },
+      {
+        "id": "show-title-attr",
+        "parentId": "shows-entity",
+        "type": "Attribute",
+        "position": {
+          "x": 0,
+          "y": -100
+        },
+        "data": {
+          "label": "title",
+          "types": [],
+          "isSelected": false
+        },
+        "measured": {
+          "width": 80,
+          "height": 40
+        }
+      },
+      {
+        "id": "show-description-attr",
+        "parentId": "shows-entity",
+        "type": "Attribute",
+        "position": {
+          "x": 120,
+          "y": -100
+        },
+        "data": {
+          "label": "description",
+          "types": [],
+          "isSelected": false
+        },
+        "measured": {
+          "width": 100,
+          "height": 40
+        }
+      },
+      {
+        "id": "show-release-year-attr",
+        "parentId": "shows-entity",
+        "type": "Attribute",
+        "position": {
+          "x": 150,
+          "y": 0
+        },
+        "data": {
+          "label": "release_year",
+          "types": [],
+          "isSelected": false
+        },
+        "measured": {
+          "width": 100,
+          "height": 40
+        }
+      },
+      {
+        "id": "show-image-url-attr",
+        "parentId": "shows-entity",
+        "type": "Attribute",
+        "position": {
+          "x": 120,
+          "y": 80
+        },
+        "data": {
+          "label": "image_url",
+          "types": [],
+          "isSelected": false
+        },
+        "measured": {
+          "width": 90,
+          "height": 40
+        }
+      },
+      {
+        "id": "show-created-at-attr",
+        "parentId": "shows-entity",
+        "type": "Attribute",
+        "position": {
+          "x": 0,
+          "y": 100
+        },
+        "data": {
+          "label": "created_at",
+          "types": [],
+          "isSelected": false
+        },
+        "measured": {
+          "width": 90,
+          "height": 40
+        }
+      },
+      {
+        "id": "history-id-attr",
+        "parentId": "watch-history-entity",
+        "type": "Attribute",
+        "position": {
+          "x": -150,
+          "y": -100
+        },
+        "data": {
+          "label": "history_id",
+          "types": [
+            "Key"
+          ],
+          "isSelected": false
+        },
+        "measured": {
+          "width": 90,
+          "height": 40
+        }
+      },
+      {
+        "id": "history-rating-attr",
+        "parentId": "watch-history-entity",
+        "type": "Attribute",
+        "position": {
+          "x": 0,
+          "y": -100
+        },
+        "data": {
+          "label": "rating",
+          "types": [],
+          "isSelected": false
+        },
+        "measured": {
+          "width": 80,
+          "height": 40
+        }
+      },
+      {
+        "id": "history-review-attr",
+        "parentId": "watch-history-entity",
+        "type": "Attribute",
+        "position": {
+          "x": 120,
+          "y": -100
+        },
+        "data": {
+          "label": "review",
+          "types": [],
+          "isSelected": false
+        },
+        "measured": {
+          "width": 80,
+          "height": 40
+        }
+      },
+      {
+        "id": "history-watched-on-attr",
+        "parentId": "watch-history-entity",
+        "type": "Attribute",
+        "position": {
+          "x": -170,
+          "y": 0
+        },
+        "data": {
+          "label": "watched_on",
+          "types": [],
+          "isSelected": false
+        },
+        "measured": {
+          "width": 100,
+          "height": 40
+        }
+      },
+      {
+        "id": "history-created-at-attr",
+        "parentId": "watch-history-entity",
+        "type": "Attribute",
+        "position": {
+          "x": 150,
+          "y": 0
+        },
+        "data": {
+          "label": "created_at",
+          "types": [],
+          "isSelected": false
+        },
+        "measured": {
+          "width": 90,
+          "height": 40
+        }
+      },
+      {
+        "id": "fav-id-attr",
+        "parentId": "favourites-entity",
+        "type": "Attribute",
+        "position": {
+          "x": -60,
+          "y": -80
+        },
+        "data": {
+          "label": "fav_id",
+          "types": [
+            "Key"
+          ],
+          "isSelected": false
+        },
+        "measured": {
+          "width": 80,
+          "height": 40
+        }
+      },
+      {
+        "id": "fav-created-at-attr",
+        "parentId": "favourites-entity",
+        "type": "Attribute",
+        "position": {
+          "x": 60,
+          "y": -80
+        },
+        "data": {
+          "label": "created_at",
+          "types": [],
+          "isSelected": false
+        },
+        "measured": {
+          "width": 90,
+          "height": 40
+        }
+      },
+      {
+        "id": "has-genre-rel",
+        "type": "Relationship",
+        "position": {
+          "x": 750,
+          "y": 150
+        },
+        "data": {
+          "label": "Has_Genre",
+          "type": "Regular",
+          "isConnectable": false,
+          "isSelected": false
+        },
+        "measured": {
+          "width": 100,
+          "height": 60
+        }
+      },
+      {
+        "id": "watches-rel",
+        "type": "Relationship",
+        "position": {
+          "x": 250,
+          "y": 320
+        },
+        "data": {
+          "label": "Watches",
+          "type": "Regular",
+          "isConnectable": false,
+          "isSelected": false
+        },
+        "measured": {
+          "width": 90,
+          "height": 60
+        }
+      },
+      {
+        "id": "watched-by-rel",
+        "type": "Relationship",
+        "position": {
+          "x": 550,
+          "y": 320
+        },
+        "data": {
+          "label": "Watched_In",
+          "type": "Regular",
+          "isConnectable": false,
+          "isSelected": false
+        },
+        "measured": {
+          "width": 100,
+          "height": 60
+        }
+      },
+      {
+        "id": "favourites-user-rel",
+        "type": "Relationship",
+        "position": {
+          "x": 250,
+          "y": 550
+        },
+        "data": {
+          "label": "Marked_By",
+          "type": "Regular",
+          "isConnectable": false,
+          "isSelected": false
+        },
+        "measured": {
+          "width": 100,
+          "height": 60
+        }
+      },
+      {
+        "id": "favourites-show-rel",
+        "type": "Relationship",
+        "position": {
+          "x": 550,
+          "y": 550
+        },
+        "data": {
+          "label": "Favourite_Of",
+          "type": "Regular",
+          "isConnectable": false,
+          "isSelected": false
+        },
+        "measured": {
+          "width": 110,
+          "height": 60
+        }
+      }
+    ],
+    "edges": [
+      {
+        "id": "user-id-edge",
+        "type": "Attribute",
+        "source": "users-entity",
+        "target": "user-id-attr"
+      },
+      {
+        "id": "user-name-edge",
+        "type": "Attribute",
+        "source": "users-entity",
+        "target": "user-name-attr"
+      },
+      {
+        "id": "user-email-edge",
+        "type": "Attribute",
+        "source": "users-entity",
+        "target": "user-email-attr"
+      },
+      {
+        "id": "user-password-edge",
+        "type": "Attribute",
+        "source": "users-entity",
+        "target": "user-password-attr"
+      },
+      {
+        "id": "user-created-at-edge",
+        "type": "Attribute",
+        "source": "users-entity",
+        "target": "user-created-at-attr"
+      },
+      {
+        "id": "genre-id-edge",
+        "type": "Attribute",
+        "source": "genres-entity",
+        "target": "genre-id-attr"
+      },
+      {
+        "id": "genre-name-edge",
+        "type": "Attribute",
+        "source": "genres-entity",
+        "target": "genre-name-attr"
+      },
+      {
+        "id": "show-id-edge",
+        "type": "Attribute",
+        "source": "shows-entity",
+        "target": "show-id-attr"
+      },
+      {
+        "id": "show-title-edge",
+        "type": "Attribute",
+        "source": "shows-entity",
+        "target": "show-title-attr"
+      },
+      {
+        "id": "show-description-edge",
+        "type": "Attribute",
+        "source": "shows-entity",
+        "target": "show-description-attr"
+      },
+      {
+        "id": "show-release-year-edge",
+        "type": "Attribute",
+        "source": "shows-entity",
+        "target": "show-release-year-attr"
+      },
+      {
+        "id": "show-image-url-edge",
+        "type": "Attribute",
+        "source": "shows-entity",
+        "target": "show-image-url-attr"
+      },
+      {
+        "id": "show-created-at-edge",
+        "type": "Attribute",
+        "source": "shows-entity",
+        "target": "show-created-at-attr"
+      },
+      {
+        "id": "history-id-edge",
+        "type": "Attribute",
+        "source": "watch-history-entity",
+        "target": "history-id-attr"
+      },
+      {
+        "id": "history-rating-edge",
+        "type": "Attribute",
+        "source": "watch-history-entity",
+        "target": "history-rating-attr"
+      },
+      {
+        "id": "history-review-edge",
+        "type": "Attribute",
+        "source": "watch-history-entity",
+        "target": "history-review-attr"
+      },
+      {
+        "id": "history-watched-on-edge",
+        "type": "Attribute",
+        "source": "watch-history-entity",
+        "target": "history-watched-on-attr"
+      },
+      {
+        "id": "history-created-at-edge",
+        "type": "Attribute",
+        "source": "watch-history-entity",
+        "target": "history-created-at-attr"
+      },
+      {
+        "id": "fav-id-edge",
+        "type": "Attribute",
+        "source": "favourites-entity",
+        "target": "fav-id-attr"
+      },
+      {
+        "id": "fav-created-at-edge",
+        "type": "Attribute",
+        "source": "favourites-entity",
+        "target": "fav-created-at-attr"
+      },
+      {
+        "id": "shows-has-genre-edge",
+        "type": "Relationship",
+        "source": "shows-entity",
+        "target": "has-genre-rel",
+        "data": {
+          "cardinality": "N"
+        }
+      },
+      {
+        "id": "has-genre-genres-edge",
+        "type": "Relationship",
+        "source": "has-genre-rel",
+        "target": "genres-entity",
+        "data": {
+          "cardinality": "1"
+        }
+      },
+      {
+        "id": "users-watches-edge",
+        "type": "Relationship",
+        "source": "users-entity",
+        "target": "watches-rel",
+        "data": {
+          "cardinality": "1"
+        }
+      },
+      {
+        "id": "watches-history-edge",
+        "type": "Relationship",
+        "source": "watches-rel",
+        "target": "watch-history-entity",
+        "data": {
+          "cardinality": "N"
+        }
+      },
+      {
+        "id": "shows-watched-edge",
+        "type": "Relationship",
+        "source": "shows-entity",
+        "target": "watched-by-rel",
+        "data": {
+          "cardinality": "1"
+        }
+      },
+      {
+        "id": "watched-history-edge",
+        "type": "Relationship",
+        "source": "watched-by-rel",
+        "target": "watch-history-entity",
+        "data": {
+          "cardinality": "N"
+        }
+      },
+      {
+        "id": "users-favourites-edge",
+        "type": "Relationship",
+        "source": "users-entity",
+        "target": "favourites-user-rel",
+        "data": {
+          "cardinality": "1"
+        }
+      },
+      {
+        "id": "favourites-user-fav-edge",
+        "type": "Relationship",
+        "source": "favourites-user-rel",
+        "target": "favourites-entity",
+        "data": {
+          "cardinality": "N"
+        }
+      },
+      {
+        "id": "shows-favourites-edge",
+        "type": "Relationship",
+        "source": "shows-entity",
+        "target": "favourites-show-rel",
+        "data": {
+          "cardinality": "1"
+        }
+      },
+      {
+        "id": "favourites-show-fav-edge",
+        "type": "Relationship",
+        "source": "favourites-show-rel",
+        "target": "favourites-entity",
+        "data": {
+          "cardinality": "N"
+        }
+      }
+    ],
+    "viewport": {
+      "x": 0,
+      "y": 0,
+      "zoom": 1
+    }
+  },
+  "name": "movie-anime-erd",
+  "folder": {
+    "name": "Diagrams",
+    "folderType": 1,
+    "depth": 0,
+    "id": 47131
+  },
+  "id": 39627,
+  "updatedAtTimestamp": 1733876400
+}

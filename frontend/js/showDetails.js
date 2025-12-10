@@ -41,8 +41,20 @@ async function loadShowDetails() {
         document.getElementById('showGenre').textContent = currentShow.genre_name || 'Unknown';
         document.getElementById('showYear').textContent = currentShow.release_year || 'N/A';
         document.getElementById('showDescription').textContent = currentShow.description || 'No description available';
-        document.getElementById('showImage').src = currentShow.image_url || 'https://via.placeholder.com/300x450?text=No+Image';
-        document.getElementById('showImage').alt = currentShow.title;
+        
+        // Use gradient placeholder instead of image
+        const imgElement = document.getElementById('showImage');
+        const gradients = [
+            'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+            'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
+            'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
+            'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)',
+            'linear-gradient(135deg, #fa709a 0%, #fee140 100%)'
+        ];
+        const gradient = gradients[showId % gradients.length];
+        imgElement.style.background = gradient;
+        imgElement.removeAttribute('src');
+        imgElement.alt = currentShow.title;
         
         // Set today's date as default
         document.getElementById('watchedOn').valueAsDate = new Date();

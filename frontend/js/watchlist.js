@@ -51,15 +51,25 @@ function displayWatchHistory(history) {
     
     noHistoryMessage.style.display = 'none';
     
-    watchHistoryList.innerHTML = history.map(item => {
+    const gradients = [
+        'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+        'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
+        'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
+        'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)',
+        'linear-gradient(135deg, #fa709a 0%, #fee140 100%)',
+        'linear-gradient(135deg, #30cfd0 0%, #330867 100%)',
+        'linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)',
+        'linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)'
+    ];
+    
+    watchHistoryList.innerHTML = history.map((item, index) => {
         const stars = '⭐'.repeat(item.rating);
         const watchedDate = new Date(item.watched_on).toLocaleDateString();
+        const gradient = gradients[index % gradients.length];
         
         return `
             <div class="watchlist-item">
-                <img src="${item.image_url || 'https://via.placeholder.com/150x200?text=No+Image'}" 
-                     alt="${item.title}" 
-                     class="watchlist-image">
+                <div class="watchlist-image" style="background: ${gradient}"></div>
                 
                 <div class="watchlist-info">
                     <h3>${item.title}</h3>
